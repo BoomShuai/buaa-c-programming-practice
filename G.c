@@ -49,10 +49,10 @@ void solve(void) {
         f[tot] = f[tot - 1] + f[tot - 2];
     }
     int t;
-    scanf("%d", &t);
+    if (scanf("%d", &t) != 1) return;
     while (t--) {
         ull a, b;
-        scanf("%llu%llu", &a, &b);
+        if (scanf("%llu%llu", &a, &b) != 2) return;
         int da = dep(a), db = dep(b);
         while (da > db) a = fa(a), da--;
         while (db > da) b = fa(b), db--;

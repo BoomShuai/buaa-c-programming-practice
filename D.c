@@ -85,14 +85,14 @@ void dij(int st, ll d[], int n) {
 
 void solve(void) {
     int n, m, k;
-    scanf("%d%d%d", &n, &m, &k);
+    if (scanf("%d%d%d", &n, &m, &k) != 3) return;
     for (int i = 1; i <= m; i++) {
         int x, y, z;
-        scanf("%d%d%d", &x, &y, &z);
+        if (scanf("%d%d%d", &x, &y, &z) != 3) return;
         add(x, y, z);
         add(y, x, z);
     }
-    for (int i = 1; i <= k; i++) scanf("%d", &s[i]);
+    for (int i = 1; i <= k; i++) if (scanf("%d", &s[i]) != 1) return;
     dij(1, d1, n);
     dij(n, d2, n);
     ll ans = INF;

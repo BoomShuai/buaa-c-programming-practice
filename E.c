@@ -66,11 +66,11 @@ int kth(ll k, int n) {
 
 void solve(void) {
     int q, m = 0;
-    scanf("%d", &q);
+    if (scanf("%d", &q) != 1) return;
     for (int i = 1; i <= q; i++) {
-        scanf("%d", &op[i]);
+        if (scanf("%d", &op[i]) != 1) return;
         if (op[i] == 1) {
-            scanf("%lld%lld", &a[i], &b[i]);
+            if (scanf("%lld%lld", &a[i], &b[i]) != 2) return;
             v[++m] = a[i];
         }
     }

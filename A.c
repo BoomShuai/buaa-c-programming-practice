@@ -15,14 +15,14 @@ typedef unsigned long long ull;
 
 void solve(void) {
     int T;
-    scanf("%d", &T);
+    if (scanf("%d", &T) != 1) return;
     while (T--) {
         int n;
-        scanf("%d", &n);
+        if (scanf("%d", &n) != 1) return;
         ll first = -1, second = -1;
         for (int i = 0; i < n; i++) {
             ll x;
-            scanf("%lld", &x);
+            if (scanf("%lld", &x) != 1) return;
             if (x >= first) {
                 second = first;
                 first = x;

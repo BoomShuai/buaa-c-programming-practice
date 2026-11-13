@@ -32,7 +32,7 @@ void cp(int x, int y) {
 
 void solve(void) {
     int n;
-    scanf("%d", &n);
+    if (scanf("%d", &n) != 1) return;
     clean(a);
     a[0][1] = a[1][0] = a[1][2] = a[2][1] = 'o';
     len = 3;

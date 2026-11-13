@@ -15,17 +15,17 @@ typedef unsigned long long ull;
 
 void solve(void) {
     int t;
-    scanf("%d", &t);
+    if (scanf("%d", &t) != 1) return;
     while (t--) {
         int n;
-        scanf("%d", &n);
+        if (scanf("%d", &n) != 1) return;
         ll x0, y0, px, py, fx, fy;
         ll sum = 0;
-        scanf("%lld%lld", &x0, &y0);
+        if (scanf("%lld%lld", &x0, &y0) != 2) return;
         px = x0;
         py = y0;
         for (int i = 1; i < n; i++) {
-            scanf("%lld%lld", &fx, &fy);
+            if (scanf("%lld%lld", &fx, &fy) != 2) return;
             sum += px * fy - fx * py;
             px = fx;
             py = fy;

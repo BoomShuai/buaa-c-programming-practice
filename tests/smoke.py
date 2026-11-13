@@ -20,6 +20,7 @@ CASES = [
     ("H", "0\n", " o\no o\n o\n"),
     ("H", "1\n", " o  o\no oo o\n o  o\n o  o\no oo o\n o  o\n"),
 ]
+CASES += [(program, "", "0\n" if program == "B" else "") for program in "ABCDEFGH"]
 
 
 def run(directory, program, input_text):

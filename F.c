@@ -18,8 +18,8 @@ bool f[55][205][2], g[55][205][2];
 void solve(void) {
     char s[105];
     int n;
-    scanf("%s", s);
-    scanf("%d", &n);
+    if (scanf("%100s", s) != 1) return;
+    if (scanf("%d", &n) != 1) return;
     int len = strlen(s), mid = len + 2;
     f[0][mid][1] = true;
     for (int i = 0; i < len; i++) {
